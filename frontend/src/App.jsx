@@ -30,6 +30,8 @@ import UpdateRole from './Admin/UpdateRole';
 import OrdersList from './Admin/OrdersList';
 import UpdateOrder from './Admin/UpdateOrder';
 import ReviewsList from './Admin/ReviewsList';
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
   const {isAuthenticated,user}=useSelector(state=>state.user);
@@ -46,6 +48,8 @@ function App() {
       <Route path="/" element={<Home/>}/>
       <Route path="/product/:id" element={<ProductDetails/>}/>
       <Route path="/products" element={<Products/>}/>
+      <Route path="/about-us" element={<About/>} />
+      <Route path="/contact-us" element={<Contact/>} />
       <Route path="/products/:keyword" element={<Products/>}/>
       <Route path="/register" element={<Register/>}/>
       <Route path="/login" element={<Login/>}/>

@@ -25,7 +25,7 @@ function UpdateProduct() {
       const dispatch=useDispatch();
       const navigate=useNavigate();
       const {updateId}=useParams();
-      const categories = ["mobile", "fruits", "laptop","shirt","shoes","pants","glass","watch","cookies","Pomegranate","socks","bag","mouse","headphone","bucket","bangle","ring","lcd","jacket","tops"];
+      const categories = ["Flavoured Coffee", "Plain Coffee", "Premix", "Coffee Beans", "Tea","Crystal Coffee","Others"];
 
       useEffect(()=>{
         dispatch(getProductDetails(updateId))
@@ -40,7 +40,7 @@ function UpdateProduct() {
           setOldImage(product.image)
         }
       },[product])
-  const handleImageChange=(e)=>{
+    const handleImageChange=(e)=>{
     const files=Array.from(e.target.files);
     
     setImage([]);
@@ -82,6 +82,7 @@ function UpdateProduct() {
         dispatch(removeErrors())
       }
     },[dispatch,error,success])
+
   return (
     <>
       <Navbar />
@@ -102,7 +103,7 @@ function UpdateProduct() {
 
           <label htmlFor="price">Product Price</label>
           <input
-            type="number"
+            type="text"
             className="update-product-input"
             required
             id="price"

@@ -31,8 +31,7 @@ function ProductsList() {
             dispatch(removeSuccess());
                 }
             })
-        }
-        
+        } 
     }
     
     if(!products || products.length===0){

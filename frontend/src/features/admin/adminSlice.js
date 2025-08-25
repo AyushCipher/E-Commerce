@@ -12,7 +12,7 @@ export const fetchAdminProducts=createAsyncThunk('admin/fetchAdminProducts',asyn
     }
 })
 
-//Create Products
+// Create Products
 export const createProduct=createAsyncThunk('admin/createProduct',async(productData,{rejectWithValue})=>{
     try{
         const config={

@@ -22,7 +22,9 @@ function Products() {
    const pageFromURL=parseInt(searchParams.get("page"),10) ||1
    const [currentPage,setCurrentPage]=useState(pageFromURL);
    const navigate=useNavigate();
-   const categories=["laptop","mobile","tv","fruits","glass"];
+   //const categories=["laptop","mobile","tv","fruits","glass"];
+  const categories = ["Flavoured Coffee", "Plain Coffee", "Premix", "Coffee Beans", "Tea","Crystal Coffee","Others"];
+
    
       useEffect(()=>{
         dispatch(getProduct({keyword,page:currentPage,category}))

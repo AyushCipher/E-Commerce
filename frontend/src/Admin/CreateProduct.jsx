@@ -18,7 +18,8 @@ function CreateProduct() {
   const [image, setImage] = useState([]);
   const [imagePreview, setImagePreview] = useState([]);
 
-  const categories = ["glass", "shirt", "mobile", "dress", "tv","pant","jacket"];
+  // const categories = ["glass", "shirt", "mobile", "dress", "tv","pant","jacket"];
+  const categories = ["Flavoured Coffee", "Plain Coffee", "Premix", "Coffee Beans", "Tea","Crystal Coffee","Others"];
 
   const createProductSubmit=(e)=>{
     e.preventDefault();
@@ -87,7 +88,7 @@ function CreateProduct() {
             onChange={(e) => setName(e.target.value)}
           />
           <input
-            type="number"
+            type="text"
             className="form-input"
             placeholder="Enter Product Price"
             required
